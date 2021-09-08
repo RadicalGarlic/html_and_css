@@ -1,4 +1,4 @@
-# Structure
+# General Structure
 HTML stands for "HyperText Markup Language". The "HyperText" part refers to the fact that HTML pages can have links to other pages that allow for users to traverse pages quickly and easily. The "markup" part refers to how tags are used to "mark up" text.
 
 HTML5 is the latest major version of HTML at the time of writing (2021) and introduces many new changes. It was released in 2008. If an older browser that doesn't support HTML5 encounters a page with HTML5 elements, it simply doesn't display the HTML5 elements.
