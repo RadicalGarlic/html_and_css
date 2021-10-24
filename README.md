@@ -10,3 +10,4 @@ Loosely based on "HTML & CSS: Design and Build Websites" by Jon Duckett.
 ### [Links](html/links.md)
 ### [Images](html/images.md)
 ### [Tables](html/tables.md)
+### [Forms](html/forms.md)
