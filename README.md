@@ -11,3 +11,5 @@ Loosely based on "HTML & CSS: Design and Build Websites" by Jon Duckett.
 ### [Images](html/images.md)
 ### [Tables](html/tables.md)
 ### [Forms](html/forms.md)
+### [Extras](html/extras.md)
+### [Flash, Video, Audio](html/flash-video-audio.md)
