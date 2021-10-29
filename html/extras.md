@@ -1,47 +1,4 @@
 # Extras
-## History
-HTML4 was released in 1997, and is still mostly similar to HTML today (2021).
-
-XHTML 1.0 was released in 2000. When XML was released in 1998, it was decided that HTML4 should be reformulated to adhere to the more strict rules of XML. For example...
-1. Every element needs a closing tag (except for empty elements like `<img />`).
-1. Attribute names must be lower case.
-1. All attributes need a value, which must be enclosed in double quotes.
-1. Deprecated elements were removed.
-1. Every inner element opened inside an outer element must be closed inside the outer element.
-
-This allowed for XML parsers to also work for (X)HTML.
-
-HTML5 was released in 2008 and is still the most recent version of HTML as of 2021, although there have been modifications to HTML5 since its release.
-
-## Doctypes
-To specify which version of HTML is being used, each HTML page should begin with a doctype specifying the version.
-
-* HTML5
-```html
-<!DOCTYPE html>
-```
-* HTML4
-```html
-<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN"
-                      "http://www.w3.org/TR/html4/strict.dtd">
-```
-* Transitional XHTML 1.0
-```html
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
-                      "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-```
-* Strict XHTML 1.0
-```html
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
-                      "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
-```
-* Strict XHTML 1.0 with the XML declaration
-```html
-<?xml version="1.0" ?>
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
-                      "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
-```
-
 ## id Attribute
 Every HTML element can have the `id` attribute. The value for the attribute must be unique throughout the HTML document and must start with either a letter or underscore. The attribute is useful for allowing CSS/JS to operate on elements.
 
