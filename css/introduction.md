@@ -91,15 +91,68 @@ Multiple `link` elements can be used to link to multiple CSS files for a single 
 CSS selectors can select by many things (element type, class, attributes and their values, etc.).
 
 Below is a list containing the most common ones.
-* `* {}`<br/>Universal. Applies to all elements in the document.
-* `someHtmlElement {}`<br/>Matches all HTML elements of the given type. For example, `p {}` would match all `<p>` elements.
-* `.classAttrValue {}`<br/>Matches all elements with `class` attribute "classAttrValue".
-* `p.classAttrValue {}`<br/>Matches all `<p>` elements with class value "note".
-* `#idAttrValue {}`<br/>Matches all elements with `id` attribute value "idAttrValue".
-* `someHtmlElement>someOtherHtmlElement {}`<br/>Matches all elements of type `someOtherHtmlElement` that are direct children of `someHtmlElement`. For example, `li>a {}` matches all `<a>` elements that are direct children of a `<li>` element.
-* `someElement someOtherElement {}`<br/>Matches all `someOtherElement` type elements that are descendants within a `someElement`, no matter how deep.
-* `someElement+someOtherElement {}`<br/>Matches the first `someOtherElement` element after any `someElement` element after the `someElement` has been closed (siblings).
-* `someElement~someOtherElement {}`<br/>Matches all `someOtherElement` elements that are siblings of a `someElement` element.
+<table>
+    <tr>
+        <td><code class="langauage-css">* {}</code></td>
+        <td>Universal. Applies to all elements in the document.</td>
+    </tr>
+    <tr>
+        <td><code class="language-css">someHtmlElement {}</code></td>
+        <td>Matches all HTML elements of the given type. For example, <code>p {}</code> would match all <code>&lt;p&gt;</code> elements.</td>
+    </tr>
+    <tr>
+        <td><code class="language-css">.classAttrValue {}</code></td>
+        <td>Matches all elements with <code>class</code> attribute "classAttrValue".</td>
+    </tr>
+    <tr>
+        <td><code class="language-css">p.classAttrValue {}</code></td>
+        <td>Matches all <code>&lt;p&gt;</code> elements with class value "classAttrValue".</td>
+    </tr>
+    <tr>
+        <td><code class="language-css">#idAttrValue {}</code></td>
+        <td>Matches all elements with <code>id</code> attribute value "idAttrValue"</td>
+    </tr>
+    <tr>
+        <td><code class="language-css">someHtmlElement>someOtherHtmlElement {}</code></td>
+        <td>Matches all elements of type "someOtherHtmlElement" that are direct children of "someHtmlElement". For example, <code>li&gt;a {}</code> matches all <code>&lt;a&gt;</code> elements that are direct children of a <code>&lt;li&gt;</code> element.
+    </tr>
+    <tr>
+        <td><code class="language-css">someElement someOtherElement {}</code></td>
+        <td>Matches all "someOtherElement" type elements that are descendants within a "someElement", no matter how deep.</td>
+    </tr>
+    <tr>
+        <td><code class="language-css">someElement+someOtherElement {}</code></td>
+        <td>Matches the first "someOtherElement" element after any "someElement" has been closed (siblings).</td>
+    </tr>
+    <tr>
+        <td><code class="language-css">someElement~someOtherElement {}</code></td>
+        <td>Matches all "someOtherElement" elements that are siblings of a "someElement" element.</td>
+    </tr>
+    <tr>
+        <td><code class="language-css">someElement[someAttr]</code> (existence)</td>
+        <td>Matches any element with the specified attribute, no matter the attribute's value.</td>
+    </tr>
+    <tr>
+        <td><code class="language-css">someElement[someAttr="val"]</code> (equality)</td>
+        <td>Matches any element with the specified attribute set to the specified value.</td>
+    </tr>
+    <tr>
+        <td><code class="language-css">someElement[someAttr~="val"]</code> (space)</td>
+        <td>Matches any element with the specified attribute that contains the specified value in its space-separated list of values.</td>
+    </tr>
+    <tr>
+        <td><code class="language-css">someElement[someAttr^"prefix"]</code> (prefix)</td>
+        <td>Matches any element with the specified attribute whose value starts with the specified prefix.</td>
+    </tr>
+    <tr>
+        <td><code class="language-css">someElement[someAttr*"substring"]</code> (substring)</td>
+        <td>Matches any element with the specified attribute whose value contains the specified substring.</td>
+    </tr>
+    <tr>
+        <td><code class="language-css">someElement[someAttr$"suffix"]</code> (suffix)</td>
+        <td>Matches any element with the specified attribute whose value ends ith the specified suffix.</td>
+    </tr>
+</table>
 
 ## How Rules Cascade
 If two or more rules apply to the same element, if the two selectors are identical, then the last rule will take place.
@@ -129,14 +182,14 @@ Inheritance can be forced by specifying `inherit` for the property value.
 ```
 
 ## Browser Quirks
-CSS1 was released in 1996, and CSS2 was released two years later in 1998.
+The first version of CSS was released in 1996, and CSS2 was released two years later in 1998.
 
 CSS3 is the current standard at the time of writing (2021).
 
 Because each web browser and version can display each CSS property slightly differently, make sure to test a web page on all major browsers and multiple older versions.
 
-Sites like browsercam.com, browserlab.adobe.com, browsershots.org, and crossbrowsertesting.com can help avoid having to download and install multiple browsers.
+Sites like `browsercam.com`, `browserlab.adobe.com`, `browsershots.org`, and `crossbrowsertesting.com` can help avoid having to download and install multiple browsers.
 
 There some sites dedicated to documenting these browser quirks/differences.
-* positioniseverything.net
-* quirksmode.org
+* `positioniseverything.net`
+* `quirksmode.org`

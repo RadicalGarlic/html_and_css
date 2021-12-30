@@ -1,12 +1,8 @@
 # Text
-Structural markup is markup that specifies the structure of the web page text.
-
-Semantic markup is markup that gives extra information like what text has emphasis or is a quote. This extra information can help search engines and screen readers read the web page more accurately.
-
-## Structural Markup
-### Headings
+## Headings
 HTML has 6 levels of headings. Heading 1 gets displayed the largest and heading 6 gets displayed the smallest.
 ```html
+<!DOCTYPE html>
 <html>
     <body>
         <h1>Heading 1</h1>
@@ -19,11 +15,12 @@ HTML has 6 levels of headings. Heading 1 gets displayed the largest and heading 
 </html>
 ```
 
-### Paragraph
+## Paragraph
 Paragraphs are marked with `<p>` tags. Paragraphs are usually separated by a newline.
 
 Whitespace in `<p>` tags gets collapsed, so whitespace doesn't get rendered exactly as it's written.
 ```html
+<!DOCTYPE html>
 <html>
     <body>
         <p>First paragraph</p>
@@ -36,29 +33,34 @@ Whitespace in `<p>` tags gets collapsed, so whitespace doesn't get rendered exac
 </html>
 ```
 
-### Bold face
-Text can be bolded with `<b>` tags.
+## Bold Face (or Strong)
+Text can be bolded with `<b>` tags. The `<strong>` tag also usually renders as bold text and marks the text with strong importance.
 ```html
+<!DOCTYPE html>
 <html>
     <body>
         <p><b>This text is bold.</b> This text is not.</p>
+        <p><strong>Very important and probably bold.</strong></p>
     </body>
 </html>
 ```
 
-### Italics
-Text can be italicized with `<i>` tags.
+## Italics (or Emphasis)
+Text can be italicized with `<i>` tags. The `<em>` tag also usually renders as italicized text and implies the text should be emphasized.
 ```html
+<!DOCTYPE html>
 <html>
     <body>
         <p><i>This text is italicized.</i> This text is not.</p>
+        <p><em>Emphasized and probably italicized.</em></p>
     </body>
 </html>
 ```
 
-### Superscript and Subscript
+## Superscript and Subscript
 Text can be superscripted with `<sup>` tags. Text can be subscripted with `<sub>`.
 ```html
+<!DOCTYPE html>
 <html>
     <body>
         <p>The 4<sup>th</sup></p>
@@ -67,11 +69,12 @@ Text can be superscripted with `<sup>` tags. Text can be subscripted with `<sub>
 </html>
 ```
 
-### Line Breaks
+## Line Breaks
 The tag `<br />` is used to make line breaks in paragraphs.
 
-The line break tag cannot enclose any text is one of the "empty elements" in HTML. Empty elements can be written without the extra space or `/`, so the tags `<br />`, `<br/>`, and `<br>` are all equivalent. Although they can be omitted, it's "good practice" to include the space and `/`.
+The line break tag cannot enclose any text is one of the "empty elements" in HTML. Empty elements can be written without the extra space or `/`, so the tags `<br />`, `<br/>`, and `<br>` are all equivalent. Although they can be omitted, it's "good practice" for some reason to include the space and `/`.
 ```html
+<!DOCTYPE html>
 <html>
     <body>
         <p>This sentence is on...<br />...two lines.</p>
@@ -80,9 +83,10 @@ The line break tag cannot enclose any text is one of the "empty elements" in HTM
 </html>
 ```
 
-### Horizontal Rule
+## Horizontal Rule
 The tag `<hr />` creates a line break and a horizontal separating line. The `<hr />` tag is another empty element.
 ```html
+<!DOCTYPE html>
 <html>
     <body>
         <p>Top<hr />Bottom</p>
@@ -90,30 +94,10 @@ The tag `<hr />` creates a line break and a horizontal separating line. The `<hr
 </html>
 ```
 
-## Semantic Markup
-### Strong
-The `<strong>` tag marks text with strong importance. It usually gets rendered as bold text.
+## Quotes
+The `<q>` tag marks smaller quotes that can sit inline within a paragraph. It usually gets rendered with quotation marks, but the Internet Explorer browser doesn't. For this reason, a lot of people don't like to use this tag.
 ```html
-<html>
-    <body>
-        <strong>Very important</strong>
-    </body>
-</html>
-```
-### Emphasis
-The `<em>` tag marks text with emphasis. It usually gets rendered as italics.
-```html
-<html>
-    <body>
-        <em>Emphasis</em>
-    </body>
-</html>
-```
-
-### Quotes
-The `<q>` tag marks smaller quotes that can sit inline with a paragraph. It usually gets rendered with quotation marks, but the Internet Explorer browser doesn't. For this reason, a lot of people don't like to use this tag.
-
-```html
+<!DOCTYPE html>
 <html>
     <body>
         <p>...and then he said <q cite="https://some-url.com">THE BIG SUCC</q>.</p>
@@ -123,6 +107,7 @@ The `<q>` tag marks smaller quotes that can sit inline with a paragraph. It usua
 
 The `<blockquote>` tag marks a big quotation (around a paragraph in size). Blockquotes usually get rendered as indented text. Don't use `<blockquote>` just to indent things though. If all you need is indentation, use CSS instead.
 ```html
+<!DOCTYPE html>
 <html>
     <body>
         <blockquote cite="https://some-url.com">
@@ -134,9 +119,10 @@ The `<blockquote>` tag marks a big quotation (around a paragraph in size). Block
 
 The quote tags both support a `cite` attribute which should be set to some URL that is the source for the given quote.
 
-### Abbrebiations and Acronyms
+## Abbrebiations and Acronyms
 The `<abbr>` tag marks abbreviations and acronyms. The full term is specified using the `title` attribute, which usually can be viewed by hovering over the text.
 ```html
+<!DOCTYPE html>
 <html>
     <body>
         <p><abbr title=Doctor>Dr.</abbr> Bobanas</p>
@@ -146,9 +132,10 @@ The `<abbr>` tag marks abbreviations and acronyms. The full term is specified us
 
 There used to be a separate `<acronym>` element for acronyms specifically. Now in HTML 5, just the `<abbr>` tag is used.
 
-### Citations
+## Citations
 The `<cite>` tag marks a reference to a book, film, or research paper. The text is usually rendered as italics.
 ```html
+<!DOCTYPE html>
 <html>
     <body>
         <p>My favorite book is <cite>The Very Hungry Caterpillar</cite>.</p>
@@ -158,9 +145,10 @@ The `<cite>` tag marks a reference to a book, film, or research paper. The text 
 
 Prior to HTML 5, `<cite>` was used for people's names. This should no longer be done in HTML 5, but a lot of people keep doing it anyways.
 
-### Definition
+## Definition
 The `<dfn>` tag is used to mark new terms that are being introduced for the first time and are being defined in the sentence. It is sometimes rendered in italics, but not all major browsers do so.
 ```html
+<!DOCTYPE html>
 <html>
     <body>
         <p>A <dfn>big banana</dfn> is a banana that is REALLY BIG YOU GUYS.</p>
@@ -168,9 +156,10 @@ The `<dfn>` tag is used to mark new terms that are being introduced for the firs
 </html>
 ```
 
-### Author Details
+## Author Details
 The `<address>` tag is used to contain contact details for the page author. It can contain a physical address, but can contain things like phone numbers or email addresses. Browsers usually display the text in italics.
 ```html
+<!DOCTYPE html>
 <html>
     <body>
         <address>
@@ -195,9 +184,10 @@ The `<del>` tag marks up text that has been no longer relevant, but is still sho
 
 The `<s>` tag marks up text that should have a strikethough. Really similar to the `<del>` tag.
 
-HTML prior to HTML 5 had the `<u>` tag for underlining, but that's being phased out.
+Prior to HTML5 the `<u>` tag was used for underlining, but that's being phased out.
 
 ```html
+<!DOCTYPE html>
 <html>
     <body>
         <p>Here is the <del>old info</del> <ins>new info</ins>!</p>

@@ -1,5 +1,5 @@
 # Introduction
-HTML stands for "HyperText Markup Language". The "HyperText" part refers to the fact that HTML pages can have links to other pages that allow for users to traverse pages quickly and easily. The "markup" part refers to how tags are used to "mark up" text.
+HTML stands for "HyperText Markup Language". The "HyperText" part refers to the fact that HTML pages can have links to other pages that allow for users to traverse pages quickly and easily. The "markup" part refers to how tags are used to mark up text.
 
 ## History
 HTML4 was released in 1997, and is still mostly similar to HTML today (2021).
@@ -42,7 +42,7 @@ The `<head>` element contains info about the page. The contents of `<head>` don'
 
 The `<body>` element marks what should appear in the main browser window, and typically makes up the bulk of the HTML document.
 
-Markup tags can be classified as either "structural" markup or "semantic" markup. Structural markup affects the structure of web page (`body`, quote, eadings, paragraph, etc.). Semantic markup adds meanings to the text it encloses (bold, italic, emphasis, etc.).
+Markup tags can be classified as either "structural" markup or "semantic" markup. Structural markup affects the structure of web page (`body`, quote, headings, paragraph, etc.). Semantic markup adds meaning to the text it encloses (bold, italic, emphasis, etc.).
 
 ## Attributes
 An HTML element can also have "attributes".
