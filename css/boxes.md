@@ -63,3 +63,101 @@ p.scroll {
 ```
 
 ## Borders, Margins, and Padding
+Every box can have the appearance of its borders, margins, and padding customized.
+
+The border is the line that shows the edge of the box.
+
+The margin sits outside the border, therefore creating gaps between other boxes. If the bottom of a margin touches any top margin, the browser will only show the larger of the two. If the margins are equal, the browser will only show one.
+
+The padding is the space between the border of a box and its contained content. Adding padding can help with readability.
+
+It's generally bad for readability to have boxes touching each other or for the content/words within a box go right up to the border.
+
+### Borders
+#### Border Width
+Border width is controlled with the `border-width` property. Percentages cannot be used with this property.
+```css
+p.classOne {
+    border-width: medium;
+}
+
+p.classTwo {
+    border-top-width: 1px;
+    border-right-width: 2px;
+    border-bottom-width: 3px;
+    border-left-width: 4px;
+}
+
+/*
+    Equivalent to...
+        border-top-width: 1px;
+        border-right-width: 2px;
+        border-bottom-width: 3px;
+        border-left-width: 4px;
+*/
+p.classThree {
+    border-width: 1px 2px 3px 4px;
+}
+```
+
+#### Border Style
+The border style is controlled with the `border-style` property. This property can only be set to one of the following values.
+1. `solid`
+1. `dotted`
+1. `dashed`
+1. `double`
+1. `groove`
+1. `ridge`
+1. `inset`
+1. `outset`
+1. `hidden` (equivalent to `none`)
+1. `none` (equivalent to `hidden`)
+
+```css
+p.classOne {
+    border-style: solid;
+}
+
+p.classTwo {
+    border-top-style: solid;
+    border-left-style: dotted;
+    border-bottom-style: dashed;
+    border-right-style: double;
+}
+```
+
+#### Border Color
+Border color is controlled with the `border-color` property. It can be set to RGB, hex codes, CSS color names, or CSS3 HSL values as described in [Color](color.md).
+
+```css
+p.classOne {
+    border-color: #ffffff;
+}
+
+p.classTwo {
+    border-top-color: #000000;
+    border-right-color: #000001;
+    border-bottom-color: #000002;
+    border-left-color: #000003;
+}
+
+/*
+    Equivalent to...
+        border-top-color: #000000;
+        border-right-color: #000001;
+        border-bottom-color: #000002;
+        border-left-color: #000003;
+*/
+p.classThree {
+    border-color: #000000 #000001 #000002 #000003;
+}
+```
+
+#### Shorthand
+Border width, style, and color and be controlled in a single `border` property (although different values for top/right/bottom/left cannot be specified).
+```css
+p {
+    /* 3px width, solid style, #000000 color */
+    border: 3px solid #000000;
+}
+```
