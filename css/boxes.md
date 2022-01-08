@@ -161,3 +161,122 @@ p {
     border: 3px solid #000000;
 }
 ```
+
+### Padding
+The `padding` property controls the amount of space between the box's contained elements and the border. It's usually specified in pixels although percentages and ems are possible. Percentages are relative to the browser window or containing box if there is one.
+
+If a box has width specified, the padding is added onto the width.
+
+```css
+p.someClass {
+    padding: 10px;
+}
+
+p.someOtherClass {
+    padding-top: 1px;
+    padding-right: 2px;
+    padding-bottom: 3px;
+    padding-left: 4px;
+}
+
+/*
+    Equivalent to setting top and bottom to 10px and left and right to 20px.
+*/
+p.shorthandClass 
+    padding: 10px 20px;
+}
+
+/*
+    Equivalent to...
+        padding-top: 1px;
+        padding-right: 2px;
+        padding-bottom: 3px;
+        padding-left: 4px;
+*/
+p.otherShorthandClass {
+    padding: 1px 2px 3px 4px;
+}
+```
+
+The `padding` property is NOT inherited by child elements.
+
+### Margin
+The `margin` property controls the amount of space between boxes. It's usually specified in pixels although percentages and ems are possible.
+
+If boxes sit on top of each other, only the larger of the two (top vs. bottom) will be shown. If both are equal, only one will be shown.
+
+```css
+p.someClass {
+    margin: 10px;
+}
+
+p.someOtherClass {
+    margin-top: 1px;
+    margin-right: 2px;
+    margin-bottom: 3px;
+    margin-left: 4px;
+}
+
+/*
+    Equivalent to setting top and bottom to 10px and left and right to 20px.
+*/
+p.shorthandClass {
+    margin: 10px 20px;
+}
+
+/*
+    Equivalent to...
+        margin-top: 1px;
+        margin-right: 2px;
+        margin-bottom: 3px;
+        margin-left: 4px;
+*/
+p.otherShorthandClass {
+    margin: 1px 2px 3px 4px;
+}
+```
+
+The `margin` property is also NOT inherited by child elements.
+
+## Centering Content
+To center a box on a page or within another box, set the left and right margins to `auto`. Also make sure to set the width of the box to some value or else it will span the entire width of the page or containing box.
+```css
+p.someClass {
+    width: 400px;
+    margin: 10px auto;
+}
+```
+
+In older browsers (particularly IE6), the element should also have `text-align` set to `center`. The property is also inherited by child elements, so it would need to be overridden if child text/elements should not be also centered.
+
+## IE6 Boxes
+Internet Explorer 6 infamously had unique rules about its boxes.
+
+By default, IE6 includes the padding and margins to the width of the box instead of adding the padding and margin values to the width. This means that if padding + margin was greater than width, it the padding and width wouldn't show up. Adding the doctype for HTML5, HTML4 strict, or HTML4 transitional will force IE6 to use the standard behavior.
+
+## Changing Between Inline and Block
+The `display` property can change elements between inline and block elements.
+```css
+p.classOne {
+    /* Force block elements to be inline. */
+    display: inline;
+}
+
+p.classTwo {
+    /* Force inline elements to be block. */
+    display: block;
+}
+
+p.classThree {
+    /*
+        Force block elements to flow like inline elements, but still retain
+        other features of block elements.
+    */
+    display: inline-block;
+}
+
+p.classFour {
+    /* */
+    display: none;
+}
+```
